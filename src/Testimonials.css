@@ -1,0 +1,43 @@
+.testimonials {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.section-para {
+  font-size: 1.5rem;
+  color: rgb(140, 56, 137);
+}
+.testimonial-slider {
+  width: 500px;
+  height: 500px;
+  border-radius: 10%;
+  overflow: hidden;
+  margin: 20px;
+  box-shadow: 0px 20px 10px rgba(0, 0, 0, 0.1);
+}
+.testimonial-track {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+.testimonial-card {
+  flex: 0 0 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  background: white;
+  text-align: center;
+}
+.testimonial-card p {
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+.testimonial-card cite{
+    font-style: italic;
+    color: #666;
+}

@@ -1,0 +1,122 @@
+.header-content {
+  max-width: 1280px;
+  background-color: var(--background-color);
+  color: var(--logo-color);
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.nav-toggle {
+  width: 34px;
+  height: 28px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  height: 3px;
+  background-color: thistle;
+  border-radius: 2px;
+  transition:
+    transform 0.2s ease,
+    opacity 0.2s ease;
+}
+
+.navbar {
+  display: none;
+  position: fixed;
+  top: 64px;
+  right: 0;
+  left: 0;
+  margin: 0;
+  padding: 1rem;
+  background-color: rgba(23, 23, 23, 0.95);
+  color: thistle;
+  gap: 0.8rem;
+  flex-direction: column;
+  align-items: center;
+  border-bottom-left-radius: 0.8rem;
+  border-bottom-right-radius: 0.8rem;
+  z-index: 1000;
+}
+
+.navbar.active {
+  display: flex;
+}
+
+.navbar a {
+  color: thistle;
+  text-decoration: none;
+  font-size: 1.05rem;
+  padding: 0.5rem 0;
+  width: 100%;
+  text-align: center;
+  transition:
+    color 0.3s,
+    transform 0.2s ease;
+}
+
+.navbar a:hover {
+  color: rgb(187, 76, 187);
+  transform: scale(1.05);
+}
+
+/* Media Queries for Responsive Design if screen size is 1000px or wider */
+@media screen and (min-width: 1000px) {
+  .nav-toggle {
+    display: none;
+  }
+
+  .navbar {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    gap: 2rem;
+    background: transparent;
+    align-items: center;
+    padding: 0;
+    margin-left: auto;
+    border-radius: 0;
+    width: auto;
+  }
+
+  .navbar a {
+    width: auto;
+    padding: 0;
+    text-align: left;
+    font-size: 1rem;
+  }
+}
+
+.hero,
+.post,
+.testimonial-card,
+.Services-section,
+.contactform-section,
+.footer-section {
+  opacity: 1;
+  transform: translateY(0);
+  transition:
+    opacity 0.6s ease-out,
+    transform 0.6s ease-out;
+}
+
+.hero.visible,
+.post.visible,
+.Services-section.visible,
+.testimonial-card.visible,
+.contactform-section.visible,
+.footer-section.visible {
+  opacity: 1;
+  transform: translateY(0); /* slide into place */
+}
