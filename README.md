@@ -1,4 +1,6 @@
-# React + Vite
+# Photo-Gallery
+
+This is a React application built with Vite, featuring a photo gallery with various sections including Blog, Booking, Services, and Testimonials.
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
