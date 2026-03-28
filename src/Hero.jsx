@@ -1,5 +1,5 @@
-import React from "react";
 import "./Hero.css";
+import {Link} from "react-router-dom";
 
 function Hero({ title, description, buttonText, buttonLink, GalleryLink, GalleryText}) {
   return (
@@ -12,9 +12,9 @@ function Hero({ title, description, buttonText, buttonLink, GalleryLink, Gallery
             <a href={buttonLink} className="bookme">
             {buttonText}
           </a>
-            <a href={GalleryLink} className="GalleryView">
+            <Link to={GalleryLink} className="gallery">
             {GalleryText}
-          </a>
+          </Link>
           </div>
         </section>
       </main>
@@ -22,4 +22,4 @@ function Hero({ title, description, buttonText, buttonLink, GalleryLink, Gallery
   );
 }
 
-export default Hero;
+export default Hero

@@ -23,8 +23,9 @@ function Footer({ brandName, tagline, links, contacts, socials, year }) {
 
       <div className="footer-contact">
         {contacts.map((contact, index) => (
-          <a key={index} href={contact.href} target="_blank" rel="noopener noreferrer">
-            {contact.icon}
+          <a key={index} href={contact.href} className='contact-link' target="_blank" rel="noopener noreferrer">
+            <span className='contact-icon'>{contact.icon}</span>
+            <span className='contact-text'>{contact.text}</span>
           </a>
         ))}
       </div>
