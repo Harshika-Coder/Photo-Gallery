@@ -53,8 +53,14 @@ A modern, responsive photo gallery website built with React and Vite, designed t
    ```
 
 5. **Preview production build**
+
    ```bash
    npm run preview
+   ```
+
+6. **Start the backend server**
+   ```bash
+   npm run server
    ```
 
 ## 📖 Usage
@@ -64,6 +70,28 @@ A modern, responsive photo gallery website built with React and Vite, designed t
 - Explore services and read blog posts
 - Use the booking form to inquire about services
 - Check out client testimonials
+
+## 🧩 Backend API Uses
+
+The backend is powered by Express and is used to support dynamic form submissions and future API-driven content.
+
+- `GET /api/health` — health check endpoint, useful for verifying the backend is running
+- `GET /api/gallery` — returns gallery metadata the frontend can use for the gallery page
+- `GET /api/services` — returns the services list for the services section
+- `POST /api/bookings` — accepts booking/contact requests from the frontend booking form
+- `POST /api/contact` — accepts generic contact inquiries when you want a dedicated contact endpoint
+
+## 🚀 Running the application
+
+1. Start the frontend:
+   ```bash
+   npm run dev
+   ```
+2. Start the backend server:
+   ```bash
+   npm run server
+   ```
+3. In development, the frontend proxies `/api` requests to `http://localhost:4000`.
 
 ## 🎨 Project Structure
 

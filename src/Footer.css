@@ -1,7 +1,7 @@
 .footer-section {
   width: 100%;
-  background-color: var(--primary-color);
-  color: var(--background-color);
+  background-color: var(--background-color);
+  color: white;
   padding: 3rem 2rem;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
@@ -25,14 +25,14 @@
 }
 
 .footer-links a {
-  color: var(--background-color);
+  color: #ebc1c1;
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .footer-links a:hover {
-  color: #0e0c0c; /* highlight color */
+  color: #b95a5a; /* highlight color */
   text-decoration: underline;
   transform: translateX(4px);
 }
@@ -46,13 +46,13 @@
 }
 
 .footer-social a {
-  color: #eee;
+  color: #ebc1c1;
   font-size: 1.8rem;
   transition: color 0.3s ease;
 }
 
 .footer-social a:hover {
-  color: #0e0c0c; /* highlight color */
+  color: #b95a5a; /* highlight color */
   transform: scale(1.1);
 }
 .footer-contact .contact-link {
@@ -60,7 +60,7 @@
   align-items: center;
   margin: 0.5rem 0;
   text-decoration: none;
-  color: white;
+  color: #ebc1c1;
 }
 
 .footer-contact .contact-icon {
@@ -72,7 +72,7 @@
   font-size: 0.95rem;
 }
 .footer-contact a:hover{
-  color: #030303; /* highlight color */
+  color: #b95a5a; /* highlight color */
   transform: scale(1);
 }
 .footer-copy {

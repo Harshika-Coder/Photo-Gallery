@@ -1,5 +1,5 @@
 // Animation script for fade-in and slide-up effects
-document.addEventListener("DOMContentLoaded", () => {
+export function setupAnimations() {
   const observerOptions = {
     threshold: 0.1, // Trigger when 10% of the element is visible
     rootMargin: "0px 0px -50px 0px", // Trigger slightly before fully in view
@@ -17,12 +17,22 @@ document.addEventListener("DOMContentLoaded", () => {
   const animatedElements = document.querySelectorAll(
     ".hero, .post, .testimonial-card, .Services-section, .contactform-section, .footer-section, .Blog-section, .testimonials",
   );
+
   animatedElements.forEach((el) => {
-    // Check if already in view
+    // Check if already in view on page load
     const rect = el.getBoundingClientRect();
     if (rect.top < window.innerHeight && rect.bottom > 0) {
       el.classList.add("visible");
     }
     observer.observe(el);
   });
-});
+
+  return observer;
+}
+
+// Auto-run on DOM ready as fallback
+if (document.readyState === "loading") {
+  document.addEventListener("DOMContentLoaded", setupAnimations);
+} else {
+  setupAnimations();
+}

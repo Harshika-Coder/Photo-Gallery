@@ -2,25 +2,64 @@
   padding: 20px;
   background-color: #f9f9f9;
   min-height: 100vh;
+  position: relative;
+}
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.8);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s ease; /* smooth entry */
+  z-index: 2000;
+}
+.modal img {
+  max-width: 90%;
+  max-height: 90%;
+  transition: transform 0.3s ease;
+  cursor: zoom-in;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+.modal img.zoomed {
+  transform: scale(2);
+  cursor: zoom-out;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* Back button styling */
 .back-button {
-  position: sticky;
-  top: 0;
+  position: fixed;
+  top: 12px;
+  left: 20px;
   background: transparent;
-  padding: 12px 20px;
-  z-index: 1000;
+  z-index: 2100;
 }
 
 .back-link {
   text-decoration: none;
-  font-size: 18px;
-  font-weight: 500;
+  font-size: 1.25rem;
+  font-weight: 900;
   color: #333;
   transition: color 0.2s ease;
 }
-
+.back-link img {
+  width: 30px;
+  height: 30px;
+}
 .back-link:hover {
   color: #0077cc;
 }
@@ -30,6 +69,8 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 16px;
+  margin-top: 60px;
+  grid-auto-rows: 220px;
 }
 
 /* Image and video styling */
@@ -39,12 +80,16 @@
   height: 100%;
   border-radius: 8px;
   object-fit: cover;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.15);
-  transition: transform 0.2s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
 }
 
 /* Hover effect */
 .display-grid img:hover,
 .display-grid video:hover {
   transform: scale(1.03);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.25);
 }

@@ -12,15 +12,11 @@
   gap: 1rem;
   justify-content: start;
   align-items: start;
-  margin: 2rem 0;
-}
-p {
-  margin-bottom: 1.5rem;
-  color: #666;
+  margin: 0 auto;
 }
 .section-para{
   font-size: 1.5rem;
-  color: rgb(140, 56, 137);
+  color: rgb(209, 121, 121);
 }
 .contact-form {
   gap: 1rem;
@@ -30,13 +26,12 @@ p {
   margin: 2rem auto;
   max-width: 500px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  font-family: "Segoe UI", sans-serif;
 }
 .contact-form label {
   font-weight: bold;
   margin-bottom: 0.3rem;
   font-weight: 600;
-  color: #444;
+  color: #faf5f5;
 }
 .contact-form input,
 .contact-form textarea,
@@ -44,7 +39,7 @@ p {
   width: 100%;
   padding: 0.8rem;
   margin-bottom: 1rem;
-  border: 1px solid #ccc;
+  border: 1px solid #9e9d9d;
   border-radius: 8px;
   font-size: 1rem;
   transition: border-color 0.3s ease;
@@ -53,22 +48,22 @@ p {
 .contact-form input:focus,
 .contact-form textarea:focus,
 .contact-form select:focus {
-  border-color: #ff6f91; /* soft pink highlight */
+  border-color: #83676d; 
   outline: none;
 }
 
 .submitbtn {
   width: 100%;
   padding: 1rem;
-  background: #ff6f91;
-  color: #fff;
+  background: #efeced;
+  color: #050505;
   font-size: 1.1rem;
   font-weight: bold;
   border: none;
   border-radius: 8px;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.9s ease;
 }
 .submitbtn:hover {
-  background: #df3c5a;
+  background: #a29499;
 }
