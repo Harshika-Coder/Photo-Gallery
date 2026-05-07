@@ -104,6 +104,7 @@ function GalleryView() {
 
   useEffect(() => {
     const loadGallery = async () => {
+      setIsLoading(true);
       try {
         const response = await fetch("/api/gallery");
         const result = await response.json();
@@ -125,6 +126,8 @@ function GalleryView() {
         }
       } catch (error) {
         console.warn("Failed to load gallery data from backend:", error);
+      } finally {
+        setIsLoading(false);
       }
     };
 
